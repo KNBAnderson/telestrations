@@ -1,12 +1,16 @@
 import { Component, Input, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
 import { fromEvent } from 'rxjs/observable/fromEvent';
 import { switchMap, takeUntil, pairwise } from 'rxjs/operators';
+import { Sheet } from '../../../models/Sheet';
+import { SheetService } from './../sheet.service'
+import { PlayerService } from 'app/player.service';
 
 
 @Component({
   selector: 'app-sheet',
   templateUrl: './sheet.component.html',
-  styleUrls: ['./sheet.component.css']
+  styleUrls: ['./sheet.component.css'],
+  providers: [SheetService, PlayerService]
 })
 
 export class SheetComponent implements AfterViewInit {
@@ -17,7 +21,8 @@ export class SheetComponent implements AfterViewInit {
   @Input() public height = 400;
   
   private context: CanvasRenderingContext2D;
-  
+  public turn: number /* = currentPlayer.currentGame.turn; */
+  public currentSheet: Sheet /* = currentPlayer.sheets[turn]; */
   public currentColor;
   
   private changeColor(hexcode: string) {
@@ -42,6 +47,7 @@ export class SheetComponent implements AfterViewInit {
   private saveDrawing() {
     const canvasEl: HTMLCanvasElement = this.canvas.nativeElement;
     let drawingUrl = canvasEl.toDataURL();
+    this.currentSheet.drawSomething(drawingUrl);
     console.log(drawingUrl);
   }
   
