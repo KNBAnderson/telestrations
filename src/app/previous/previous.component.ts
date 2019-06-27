@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Player } from '../../../models/Player';
+import { Game } from '../../../models/Game';
 
 @Component({
   selector: 'app-previous',
