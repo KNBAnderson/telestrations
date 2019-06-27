@@ -1,39 +1,47 @@
-#toolbar {
-    padding:0;
-    width:70%;
-    margin-left:-35%;
+.fill-space {
+    margin-left: 85%;
+  }
+
+.menu {
+    font-size: 20px;
+    margin-right: 15px;
 }
 
-header {
-    background:#3B8598;
-    width:100%;
+.lobby-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30%;
+    width: 60%;
+    background: rgba(239, 242, 247, 0.8);
+    text-align: center;
 }
 
-.basic-btn {
-    width:100px;
-    margin:0;
+.lobby-container button{
+    margin-top: 20px;
+    font-size: 20px;
+    margin-right: 100px;
+    margin-left: 100px;
 }
 
-#page {
-    padding:3em;
-    margin:0;
+.lobby-container h1 {
+    font-size: 6em;
 }
 
-#page img {
-    margin-top:30px;
+a {
+    color: #212529;
 }
 
-h2 {
-    margin:0;
+mat-toolbar {
+    background: #425F79;
 }
 
+mat-toolbar h1 {
+    font-size: 40px;
+    font-family: 'Love Ya Like A Sister', cursive;
+}
 
-@media (max-width: 600px) {
-    #page {
-        padding:1em;
-    }
-    #toolbar {
-        width:90%;
-        margin-left: -45%;
-    }
+mat-toolbar a {
+    color: white;
 }
