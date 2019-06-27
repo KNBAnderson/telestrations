@@ -26,6 +26,7 @@ export class GameLobbyComponent implements OnInit {
   profileToDisplay;
   playerId: string;
   currentRoute: string = this.router.url;
+  playerName: string = 'Player!';
 
   constructor(public af: AngularFireAuth, private route: ActivatedRoute, private location: Location, private PlayerService: PlayerService, private router: Router) {
 
@@ -48,10 +49,15 @@ export class GameLobbyComponent implements OnInit {
       this.playerId = urlParameters['id'];
     });
     this.profileToDisplay = this.PlayerService.getPlayerById(this.playerId);
+    this.playerName = this.profileToDisplay.name;
+    console.log(this.playerName);
+    
   }
 
   goToGamePage() {
     this.router.navigate([this.currentRoute + '/game']);
   };
+
+  
 
 }

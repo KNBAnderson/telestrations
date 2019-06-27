@@ -1,6 +1,7 @@
 <div class="form-container" id="toolbar">
   <header [@fallIn]="state">
     <button (click)="logout()" class="basic-btn">Logout</button>
+    <p>{{profileToDisplay.name}}</p>
   </header>
   <div id="page" [@moveInLeft]="state">
     <button (click)='goToGamePage()'>Go to your current game</button>
