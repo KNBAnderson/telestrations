@@ -1,16 +1,35 @@
+<div class="container">
 
-<div class="form-container">
-  <a routerLink="/login" id="goback">Go back</a>
-  <h2>Custom Login</h2>
+  <div class="email-container">
 
-  <span class="error" *ngIf="error" [@fallIn]='state'>{{ error }}</span>
+    <h1>Telestrations!</h1>
 
-  <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
+    <div class="mediumspace"></div>
 
-    <input type="text" placeholder="Email address" (ngModel)="email" name="email" class="txt" required>
-    <input type="password" placeholder="Password" (ngModel)="password" name="password" class="txt" required>
+    <span class="error" *ngIf="error" [@fallIn]='state'>{{ error }}</span>
 
-    <button type="submit" [disabled]="!formData.valid" class="basic-btn">Log in</button>
-    <a routerLink="/signup" class="alc">Don't have an account?</a>
-</form>
+    <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
+
+      <mat-form-field>    
+      <input matInput type="text" placeholder="Email address" (ngModel)="email" name="email" required>
+      </mat-form-field> 
+      <br>
+      <mat-form-field> 
+      <input matInput type="password" placeholder="Password" (ngModel)="password" name="password" required>
+      </mat-form-field> 
+      <br>
+
+      <button mat-stroked-button color="primary" type="submit" [disabled]="!formData.valid">Log in</button>
+
+      <div class="smallspace"></div>
+
+      <button mat-stroked-button color="primary" routerLink="/login">Go back</button>
+      <button mat-stroked-button color="primary" routerLink="/signup">Don't have an account?</button>
+
+      <div class="mediumspace"></div>
+
+    </form>
+
+  </div>
+
 </div>

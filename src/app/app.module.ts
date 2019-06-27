@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { MaterialModule } from './material.module';
 
 import { masterFirebaseConfig } from '../environments/api-keys';
 
@@ -64,6 +65,7 @@ export const firebaseConfig = {
     BrowserModule,
     FormsModule,
     HttpModule,
+    MaterialModule,
     routing,
     BrowserAnimationsModule
   ],

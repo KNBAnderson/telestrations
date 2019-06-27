@@ -1,34 +1,25 @@
-#lock {
-    width:40%;
-    margin: 1.5em auto 4em auto;
-    display:block;
+.login-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30%;
+    width: 60%;
+    background: rgba(239, 242, 247, 0.8);
+    text-align: center;
 }
 
-#google {
-    border: 1px solid #95989A;
-    /* background: #fff  url('../assets/images/google.svg') no-repeat 25px; */
-    background-size: 25px;
+button{
+    margin-top: 20px;
+    font-size: 20px;
+    margin-right: 100px;
+    margin-left: 100px;
 }
 
-#email {
-    /* background: #ECECEC  url('../assets/images/email.png') no-repeat 25px; */
-    background-size: 25px;
+h1 {
+    font-size: 6em;
 }
 
-@media (max-width: 600px) {
-    #page {
-        padding:1em;
-    }
-    #toolbar {
-        width:90%;
-        margin-left: -45%;
-    }
-
-    #google {
-        background: #fff;
-    }
-
-    #email {
-        background: #ECECEC;
-    }
+a {
+    color: #212529;
 }
