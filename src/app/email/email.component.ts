@@ -32,7 +32,7 @@ export class EmailComponent implements OnInit {
     if(auth) {
       console.log("this should be 2nd");
       
-      this.router.navigate(['game-lobby', this.keyRightNow]);
+      this.router.navigate(['/game-lobby', this.keyRightNow]);
     }
   });
 }

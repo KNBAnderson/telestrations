@@ -1,31 +1,76 @@
 # Telestrations
+by Katlin Anderson, Justin Kerntz, Lindsey Baker, and Marc Davies
+## Description
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+_An Angular app to play telestrations._
+_This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2_
 
-## Development server
+## Setup/Installation Requirements
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* _$ git clone https://github.com/KNBAnderson/telestrations.git_
+* _Create an account at https://firebase.google.com/_
+* _On Firebase, create a project called bananabox_
+* _Create a realtime database within the project_
+* _Change the rules of the database to_
+```
+{
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}
+```
+* _Create file in src/app/api-keys.ts_
+* _Add this code to the new file. Your personal keys can be found in your projects settings_
+```
+  export const masterFirebaseConfig = {
+    apiKey: XXXX,
+    authDomain: "XXXX.firebaseapp.com",
+    databaseURL: "https://XXX.firebaseio.com",
+    projectId: "XXXX",
+    storageBucket: "",
+    messagingSenderId: XXXX,
+    appId: XXXX
+};
+```
+* _$ npm install;_
+* _$ ng serve
+*_Navigate to `http://localhost:4200/`_
 
-## Code scaffolding
+## Specs
+| Behavior | Input | Output |
+| ------------- |:-------------:| -----:|
+| The wesite will allow a user to type something | - | - |
+| The website will allow a user to draw something | - | - |
+| The website will allow two users to type something, taking turns | - | - |
+| The website will allow two users to draw something, taking turns | - | - |
+| The website will save a store drawings and writing entered | - | - |
+| The website will display others writings and drawings | - | - |
+| The website will display the sequence of writing and drawings | - | - |
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+## Installation Requirements
+* Run in browser
 
-## Build
+## Known Bugs
+There are no known bugs.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Technologies Used
 
-## Running unit tests
+_HTML_
+_CSS_
+_TypeScript_
+_Angular_
+_Node_
+_Bootstrap_
+_Jasmine_
+_Linter_
+_Babel_
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### License
 
-## Running end-to-end tests
+*This software is licensed under the GPL license.*
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Copyright (c) 2019 **_Katlin Anderson, Justin Kerntz, Lindsey Baker, and Marc Davies_**
 
 ##Souces
 

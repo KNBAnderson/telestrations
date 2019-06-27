@@ -34,11 +34,12 @@ export class SignupComponent implements OnInit {
       console.log(formData.value);
       this.af.auth.createUserWithEmailAndPassword(formData.value.email, formData.value.password).then(
         (success) => {
-        this.router.navigate(['/login'])
+        // this.router.navigate(['/login'])
         var email = formData.value.email;
         var name = email.substring(0, email.lastIndexOf("@"));
         let newPlayer: Player = new Player(name, email);
         this.playerService.addPlayer(newPlayer);
+        this.router.navigate(['/login']);
       }).catch(
         (err) => {
         console.log(err);
