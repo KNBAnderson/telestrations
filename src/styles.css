@@ -1,15 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import url('https://fonts.googleapis.com/css?family=Coming+Soon|Love+Ya+Like+A+Sister&display=swap');
 /* Added this global styling to get login components styled, feel free to change -Lin */
 body {
     background:#E2E4E6;
-    padding-top:4em;
     background-image: url('./assets/images/background.jpg');
     height: 100vh;
     background-attachment: fixed;
     background-position: top right;
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Coming Soon', cursive;
 }
 
 .form-container {
@@ -116,4 +116,12 @@ h2 {
     button {
         font-size:1em;
     }
+}
+
+h1, h2, h3, h3, h5, h6 {
+    font-family: 'Love Ya Like A Sister', cursive;
+}
+
+button {
+    font-family: 'Coming Soon', cursive; 
 }
