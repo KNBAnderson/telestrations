@@ -27,11 +27,11 @@ export class NewGameComponent implements OnInit {
   }
 
   
-  async startAddingPlayer(playerEmail: string) {
-    this.playerToAdd = this.PlayerService.getPlayerByEmail(playerEmail);
-    console.log(this.playerToAdd);
+//   async startAddingPlayer(playerEmail: string) {
+//     this.playerToAdd = this.PlayerService.getPlayerByEmail(playerEmail);
+//     console.log(this.playerToAdd);
 
-}
+// }
 
 
 

@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { Router } from '@angular/router';
 import { moveIn, fallIn } from '../router.animations';
 import { PlayerService } from '../player.service';
+import { KeyRegistry } from '@angular/core/src/di/reflective_key';
 
 @Component({
   selector: 'app-email',
@@ -37,35 +38,29 @@ export class EmailComponent implements OnInit {
 
 
 onSubmit(formData) {
+  var email = formData.value.email;   
+  this.database.list('players').subscribe(players => {
+    players.forEach(player => {
+      if(player.email === email) {
+        this.player = player;
+      }
+    })
+    this.sendKey.emit(this.player.$key);
+    this.keyRightNow = this.player.$key;
+    console.log(this.keyRightNow);
+  })
   if(formData.valid) {
     this.af.auth.signInWithEmailAndPassword(formData.value.email, formData.value.password).then(
       (success) => {
-        var email = formData.value.email;   
-        var playerKey = '';
-        this.database.list('players').subscribe(players => {
-          players.forEach(player => {
-            if(player.email === email) {
-              this.player = player;
-            }
-          })
-          this.sendKey.emit(this.player.$key);
-          this.keyRightNow = this.player.$key;
-          console.log(this.keyRightNow);
-          
-          console.log(this.player.$key);
-        })
         console.log(this.keyRightNow);
-        this.router.navigate(['game-lobby', this.keyRightNow]);
-        return this.keyRightNow;
+        this.router.navigate(['game-lobby']);
     }).catch(
       (err) => {
       console.log(err);
       this.error = err;
     })
   }
-  this.email = formData.value.email;
-  return this.email;
-  
+  console.log(this.keyRightNow);
 }
 
   ngOnInit() {
