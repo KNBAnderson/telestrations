@@ -46,11 +46,11 @@ const appRoutes: Routes = [
         component: RulesComponent
     },
     {
-        path: 'players/:$key/game',
+        path: 'game-lobby/:$key/game',
         component: CurrentGameComponent
     },
     {
-        path: 'players/:$key/new-game',
+        path: 'game-lobby/:$key/new-game',
         component: NewGameComponent
     }
  ];
