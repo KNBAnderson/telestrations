@@ -34,14 +34,15 @@ export class NewGameComponent implements OnInit {
     this.newGame = new Game();
     // this.newGame.players.push(this.currentPlayer);
     this.GameService.addGame(this.newGame);
-    this.db.list('games').subscribe(games => {
-      games.forEach(game => {
-        
-          console.log(games);
-          console.log(game);
-          
-        })
-      })
+
+    // addThePlayersToGame(){
+    //   this.db.object('/games/' +.).subscribe(games => {
+    //     games.forEach(game => {
+            
+    //       })
+    //     })
+    // }
+   
   }
 
 
@@ -55,14 +56,16 @@ export class NewGameComponent implements OnInit {
         if(player.email === playerEmail) {
           this.playerToAdd = new Player(player.name, playerEmail);
           this.playerToAdd.id = player.$key;
-          this.db.object('/players/'+player.$key)
-            .update({currentGame: this.newGame})
-          console.log(this.playerToAdd);
-          console.log(players);
+          console.log(this.newGame);
           
+          this.db.object('/players/'+player.$key)
+            .update({currentGame: this.newGame}) 
+            this.newGame.players.push(this.playerToAdd)
         }
       })
      })
+     console.log(this.newGame);
+     
   }
 
 

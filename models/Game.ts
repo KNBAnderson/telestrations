@@ -3,12 +3,18 @@ import { Player } from "./Player";
 
 
 export class Game {
-    constructor(public turn: number = 0, public isGameFinished: boolean = false, public players: Player[] = [], public rounds: number = null) { }
+  
+    constructor(public turn: number = 0, 
+                public isGameFinished: boolean = false, 
+                public players: Player[] = [], 
+                public rounds: number = 0) {
+        
+    }
 
    
-    getPlayerList() {
+    // getPlayerList() {
 
-    }
+    // }
 
     startGame() {
         //set up player sheets
