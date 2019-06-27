@@ -1,4 +1,64 @@
 canvas { 
     border: 1px solid #000; 
     background-color: white;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#sheet {
+    margin-top: 25px;
+    padding: 5%;
+    text-align: center;
+
+}
+
+.draw {
+    text-align: center;
+    display: grid;
+}
+
+.buttons {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+button {
+    border: 5px solid grey;
+    padding: 5px;
+    margin: 5px;
+    width: 50%;
+}
+
+.black{
+    background-color: black;
+    color: white;
+    
+}
+.blue{
+    background-color: blue;
+}
+.red{
+    background-color: red;
+}
+.orange{
+    background-color: orange;
+}
+.yellow{
+    background-color: yellow;
+}
+.green{
+    background-color: green;
+}
+.purple{
+    background-color: purple;
+}
+
+
+.done {
+    margin-top: 15px;
+    width: 50%;
 }
