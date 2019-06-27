@@ -28,6 +28,7 @@ import { Profile } from 'selenium-webdriver/firefox';
 import { CurrentGameComponent } from './current-game/current-game.component';
 import { PreviousComponent } from './previous/previous.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NewGameComponent } from './new-game/new-game.component';
 
 
 
@@ -53,6 +54,7 @@ export const firebaseConfig = {
     PlayerListComponent,
     CurrentGameComponent,
     PreviousComponent,
+    NewGameComponent,
     GameLobbyComponent,
   ],
   imports: [
