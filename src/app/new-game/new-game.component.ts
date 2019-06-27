@@ -33,6 +33,22 @@ export class NewGameComponent implements OnInit {
 
 // }
 
+  startAddingPlayer(playerEmail: string) { 
+     this.db.list('players').subscribe(players => {
+      players.forEach(player => {
+        if(player.email === playerEmail) {
+          this.playerToAdd = new Player(player.name, playerEmail);
+          this.playerToAdd.id = player.$key;
+          console.log(this.playerToAdd);
+        }
+      })
+  //     this.sendKey.emit(this.player.$key);
+  //     this.keyRightNow = this.player.$key;
+  //     console.log(this.keyRightNow);
+  //   })
+     }
+  }
+
 
 
 

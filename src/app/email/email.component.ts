@@ -45,14 +45,12 @@ onSubmit(formData) {
         this.player = player;
       }
     })
-    this.sendKey.emit(this.player.$key);
     this.keyRightNow = this.player.$key;
     console.log(this.keyRightNow);
   })
   if(formData.valid) {
     this.af.auth.signInWithEmailAndPassword(formData.value.email, formData.value.password).then(
       (success) => {
-        console.log(this.keyRightNow);
         this.router.navigate(['game-lobby']);
     }).catch(
       (err) => {
@@ -60,7 +58,6 @@ onSubmit(formData) {
       this.error = err;
     })
   }
-  console.log(this.keyRightNow);
 }
 
   ngOnInit() {
