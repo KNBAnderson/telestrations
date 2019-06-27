@@ -3,17 +3,13 @@ import { Sheet } from "./Sheet";
 
 
 export class Player {
-  currentGame: Game = null;
-  chain: Sheet[] = [];
-  sheets: Sheet[];
-  constructor(public email: string) { 
-    
-    }
 
-    // joinGame(gamePassword: string) {
-    //   this.currentGame = this.currentGame.GameService.getGameById(gamePassword);
-    //   this.currentGame.players.push(this);
-    // }
+    public currentGame: Game;
+    chain: Sheet[];
+    sheets: Sheet[];
+
+    constructor( public name: string, public email: string) {  }
+
 
     createChainAndSheets() {
        for (let index = 1; index < this.currentGame.players. length; index++) {

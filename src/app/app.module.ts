@@ -12,7 +12,7 @@ import { SheetComponent } from './sheet/sheet.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { EmailComponent } from './email/email.component';
-import { MembersComponent } from './members/members.component';
+import { GameLobbyComponent } from './game-lobby/game-lobby.component';
 import { PlayerListComponent } from './player-list/player-list.component';
 import { RulesComponent } from './rules/rules.component';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -25,11 +25,11 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AuthGuard } from './auth.service';
 import { routing } from './app.routing';
 import { Profile } from 'selenium-webdriver/firefox';
-import { ProfileComponent } from './profile/profile.component';
 import { CurrentGameComponent } from './current-game/current-game.component';
 import { PreviousComponent } from './previous/previous.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NewGameComponent } from './new-game/new-game.component';
+
 
 
 export const firebaseConfig = {
@@ -48,15 +48,14 @@ export const firebaseConfig = {
     LoginComponent,
     SignupComponent,
     EmailComponent,
-    MembersComponent,
     NavbarComponent,
     RulesComponent,
     WelcomeComponent,
     PlayerListComponent,
-    ProfileComponent,
     CurrentGameComponent,
     PreviousComponent,
     NewGameComponent,
+    GameLobbyComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(firebaseConfig),

@@ -4,6 +4,7 @@ import { switchMap, takeUntil, pairwise } from 'rxjs/operators';
 import { Sheet } from '../../../models/Sheet';
 import { SheetService } from './../sheet.service'
 import { PlayerService } from 'app/player.service';
+import { Game } from '../../../models/game';
 
 
 @Component({

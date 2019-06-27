@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
 
     this.af.authState.subscribe(auth => { 
     if(auth) {
-      this.router.navigateByUrl('/members');
+      this.router.navigateByUrl('/game-lobby');
     }
   });
 }
@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
 loginGoogle() {
   this.af.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(
     (success) => {
-    this.router.navigate(['/members']);
+    this.router.navigate(['/game-lobby']);
   }).catch(
     (err) => {
     this.error = err;
