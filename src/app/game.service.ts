@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Game } from '../../models/Game';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
-import { Player } from '../../models/Player';
+
 
 
 
