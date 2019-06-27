@@ -35,7 +35,7 @@ const appRoutes: Routes = [
          component: EmailComponent 
     },
     {
-         path: 'game-lobby',
+         path: 'game-lobby/:$key',
          component: GameLobbyComponent, 
          canActivate: [AuthGuard]
     }, 

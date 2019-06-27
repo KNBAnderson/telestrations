@@ -7,6 +7,8 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 @Injectable()
 export class PlayerService {
   players: FirebaseListObservable<any[]>;
+  playerKey;
+  playerToAdd: Player;
   constructor(private database: AngularFireDatabase) {
     this.players = database.list('players');
   }
@@ -20,12 +22,28 @@ export class PlayerService {
   }
 
   getPlayerById(playerId: string){
+    this.playerKey = playerId;
     return this.database.object('playerslist/' + playerId)
   }
 
-  getPlayerByEmail(){
-    this.getPlayers();
-    console.log(this.players);
+  // async getPlayerByEmail(playerEmail: string) {
+  //   let playerToAdd;
+  //   this.getPlayers().subscribe(players=> {
+  //     for (let index = 0; index < players.length; index++) {
+  //       if (players[index]['email'] === playerEmail && playerEmail) {
+  //         let some: Player = new Player(players[index].email)
+  //         return some;
+         
+  //       }
+  //     }
+      
+      
+      
+      // players.find(player => {
+      //   console.log(player);
+      //   return player.email === playerEmail;
+      // })
+//     });
     
-  }
+//   }
 }
