@@ -10,6 +10,7 @@ import { EmailComponent } from './email/email.component';
 import { GameLobbyComponent } from './game-lobby/game-lobby.component';
 import { RulesComponent } from './rules/rules.component';
 import { CurrentGameComponent } from './current-game/current-game.component';
+import { SheetComponent } from './sheet/sheet.component';
 
 const appRoutes: Routes = [
     {
@@ -46,6 +47,10 @@ const appRoutes: Routes = [
     {
         path: 'players/:$key/game',
         component: CurrentGameComponent
+    },
+    {
+        path: 'game',
+        component: SheetComponent
     }
  ];
 

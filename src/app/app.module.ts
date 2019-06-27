@@ -29,6 +29,7 @@ import { CurrentGameComponent } from './current-game/current-game.component';
 import { PreviousComponent } from './previous/previous.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NewGameComponent } from './new-game/new-game.component';
+import { WriteComponent } from './write/write.component';
 
 
 
@@ -56,6 +57,7 @@ export const firebaseConfig = {
     PreviousComponent,
     NewGameComponent,
     GameLobbyComponent,
+    WriteComponent
   ],
   imports: [
     AngularFireModule.initializeApp(firebaseConfig),

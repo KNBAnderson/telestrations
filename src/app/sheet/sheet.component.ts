@@ -16,10 +16,11 @@ import { Game } from '../../../models/game';
 
 export class SheetComponent implements AfterViewInit {
     title = "Draw/describe this thing!"
+    
   
   @ViewChild('canvas') public canvas: ElementRef;
-  @Input() public width = 400;
-  @Input() public height = 400;
+  @Input() public width = 600;
+  @Input() public height = 600;
   
   private context: CanvasRenderingContext2D;
   public turn: number /* = currentPlayer.currentGame.turn; */

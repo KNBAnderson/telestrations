@@ -1,22 +1,28 @@
 
 <div id="sheet">
   <div class="draw">
-    <h1>Draw the phrase!</h1>
-    <canvas #canvas></canvas><br>
-    <button class="color" (click)="changeColor('#000000')">Black</button>
-    <button class="color" (click)="changeColor('#FF0000')">Red</button>
-    <button class="color" (click)="changeColor('#FFA500')">Orange</button>
-    <button class="color" (click)="changeColor('#FFFF00')">Yellow</button>
-    <button class="color" (click)="changeColor('#00FF00')">Green</button>
-    <button class="color" (click)="changeColor('#0000FF')">Blue</button>
-    <button class="color" (click)="changeColor('#4B0082')">Purple</button>
-    <button class="color" (click)="changeColor('#FFFFFF')">Eraser</button>
-    <hr>
-    <button class="done" (click)="saveDrawing()">Done</button>  
-
+    <div class="drawing">
+        <h1>Draw the phrase!</h1>
+      <canvas #canvas></canvas><br>
   </div>
-  <div class="write">
+    <div class="buttons">
+      <br>
+      <br>
+      <br>
+      <button class="black" (click)="changeColor('#000000')">Black</button>
+      <button class="red" (click)="changeColor('#FF0000')">Red</button>
+      <button class="orange" (click)="changeColor('#FFA500')">Orange</button>
+      <button class="yellow" (click)="changeColor('#FFFF00')">Yellow</button>
+      <button class="green" (click)="changeColor('#00FF00')">Green</button>
+      <button class="blue" (click)="changeColor('#0000FF')">Blue</button>
+      <button class="purple" (click)="changeColor('#4B0082')">Purple</button>
+      <button class="btn" (click)="changeColor('#FFFFFF')">Eraser</button>
+  </div>
+  
+</div>
+<button class="done" (click)="saveDrawing()">Done</button>  
+  <!-- <div class="write">
     <h1>Describe the drawing!</h1>
     <textarea name="description" id="description" cols="35" rows="3" maxlength="140"></textarea>
-  </div>
+  </div> -->
 </div>
