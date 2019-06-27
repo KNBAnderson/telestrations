@@ -26,14 +26,14 @@ export class PlayerService {
     return this.database.object('playerslist/' + playerId)
   }
 
-  getPlayerByEmail(playerEmail: string) {
+  async getPlayerByEmail(playerEmail: string) {
     let playerToAdd;
     this.getPlayers().subscribe(players=> {
       for (let index = 0; index < players.length; index++) {
         if (players[index]['email'] === playerEmail && playerEmail) {
           let some: Player = new Player(players[index].email)
-          
-          playerToAdd = some;
+          return some;
+         
         }
       }
       
@@ -43,8 +43,6 @@ export class PlayerService {
       //   console.log(player);
       //   return player.email === playerEmail;
       // })
-      console.log(playerToAdd);
-    return playerToAdd;
     });
     
   }

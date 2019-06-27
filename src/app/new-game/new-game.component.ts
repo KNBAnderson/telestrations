@@ -27,15 +27,12 @@ export class NewGameComponent implements OnInit {
   }
 
   
-  startAddingPlayer(playerEmail: string) {
+  async startAddingPlayer(playerEmail: string) {
     this.playerToAdd = this.PlayerService.getPlayerByEmail(playerEmail);
-    if(this.playerToAdd){
-      console.log(this.playerToAdd);
-      
-    }else{}
-    // this.playerToAdd.currentGame = this.newGame;
-    console.log(this.PlayerService.getPlayerByEmail(playerEmail));
+    console.log(this.playerToAdd);
+
 }
+
 
 
 
