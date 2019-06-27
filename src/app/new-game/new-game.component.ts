@@ -48,18 +48,28 @@ export class NewGameComponent implements OnInit {
         if(player.email === playerEmail) {
           this.playerToAdd = new Player(player.name, playerEmail);
           this.playerToAdd.id = player.$key;
+  
           this.db.object('/players/'+player.$key)
             .update({currentGame: lookItWorks}) 
+            //this needs to literally add a string to the end of the property in firebase to work
+          this.db.object('/games/'+lookItWorks) 
+            .update({currentGame: this.playerToAdd.id,
+                    rounds: this.newGame.rounds++})
+
+          //  var addPlayer = firebase.database().ref('/games/currentGame');
+          //  addPlayer.transaction((updateValue)=>{
+          //    return this.db.object('/games/'+lookItWorks) 
+          //    .update({currentGame: this.playerToAdd.id,
+          //            rounds: this.newGame.rounds++})
+    
+          //  })         
         }
       })
      })
   }
   
-  addPlayerToGameDB(){
-    this.newGame.players.forEach((player)=> {
-      console.log(this.newGame.players['email']);
-     })
-     this.GameService.addGame(this.newGame);
+  addPlayerToGame(){
+    
   }
 
 
