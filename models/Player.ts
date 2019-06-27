@@ -36,5 +36,9 @@ export class Player {
       }
     }
 
+    getSheetsByPlayerIndex(playerIndex: number) {
+      JSON.stringify(this.currentGame.players[playerIndex].sheets)
+    }
+
  
 }

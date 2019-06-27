@@ -9,9 +9,18 @@ import { Game } from '../../../models/Game';
 })
 export class PreviousComponent implements OnInit {
 
-  constructor() { }
+  previousSheet;
+
+  constructor(public player: Player) { }
+
+  getPreviousSheet() {
+    var previousPlayer = this.player.findPlayerIndex() - 1;
+    var previousPlayerSheets = this.player.getSheetsByPlayerIndex(previousPlayer);
+    this.previousSheet = previousPlayerSheets[this.player.currentGame.turn - 1];
+  }
 
   ngOnInit() {
+
   }
 
 }
