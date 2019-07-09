@@ -1,9 +1,6 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
-import {AngularFireModule} from 'angularfire2';
 import {AngularFireAuth} from 'angularfire2/auth';
-import {AngularFireDatabaseModule} from 'angularfire2/database';
 import * as firebase from 'firebase/app';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { Router } from '@angular/router';
 import { moveIn } from '../router.animations';
 

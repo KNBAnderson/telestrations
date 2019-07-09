@@ -30,7 +30,9 @@ export class EmailComponent implements OnInit {
   constructor(public af: AngularFireAuth, private router: Router, private database: AngularFireDatabase) {
   this.af.authState.subscribe(auth => { 
     if(auth) {
-      this.router.navigateByUrl('/game-lobby');
+      console.log("this should be 2nd");
+      
+      this.router.navigate(['/game-lobby', this.keyRightNow]);
     }
   });
 }
@@ -46,12 +48,11 @@ onSubmit(formData) {
       }
     })
     this.keyRightNow = this.player.$key;
-    console.log(this.keyRightNow);
   })
   if(formData.valid) {
     this.af.auth.signInWithEmailAndPassword(formData.value.email, formData.value.password).then(
       (success) => {
-        this.router.navigate(['game-lobby']);
+        this.router.navigate(['game-lobby', this.keyRightNow]);
     }).catch(
       (err) => {
       console.log(err);

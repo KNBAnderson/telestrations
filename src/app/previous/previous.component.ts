@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Player } from '../../../models/Player';
+import { Game } from '../../../models/Game';
 
 @Component({
   selector: 'app-previous',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PreviousComponent implements OnInit {
 
-  constructor() { }
+  previousSheet;
+
+  constructor(public player: Player) { }
+
+  getPreviousSheet() {
+    var previousPlayer = this.player.findPlayerIndex() - 1;
+    var previousPlayerSheets = this.player.getSheetsByPlayerIndex(previousPlayer);
+    this.previousSheet = previousPlayerSheets[this.player.currentGame.turn - 1];
+  }
 
   ngOnInit() {
+
   }
 
 }

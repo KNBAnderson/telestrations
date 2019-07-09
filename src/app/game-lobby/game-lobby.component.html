@@ -1,9 +1,32 @@
-<div class="form-container" id="toolbar">
-  <header [@fallIn]="state">
-    <button (click)="logout()" class="basic-btn">Logout</button>
-  </header>
-  <div id="page" [@moveInLeft]="state">
-    <button (click)='goToGamePage()'>Go to your current game</button>
-    <button>Start a new game</button>
+
+<mat-toolbar>
+    <h1><a routerLink="">Telestrations!</a></h1>
+    <span class="fill-space"></span>
+    <span class="menu"><button [@fallIn]="state" (click)="logout()" style="color:white;">Logout</button></span>
+</mat-toolbar>
+
+<div class="container">
+
+    <div class="lobby-container">
+      
+      <h1>Telestrations!</h1>
+  
+      <div class="mediumspace"></div>
+  
+      <span class="error" *ngIf="error">{{ error }}</span>
+  
+      <h3>Welcome back Marc! Please choose an option:</h3>
+
+      <div class="smallspace"></div>
+  
+      <div [@moveInLeft]="state">
+        <button mat-stroked-button color="primary" (click)='goToGamePage()'>Go to your current game</button><br>
+        <button mat-stroked-button color="primary">Start a new game</button>
+      </div>
+
+      <div class="mediumspace"></div>
+      
+    </div>
+  
   </div>
-</div>
+

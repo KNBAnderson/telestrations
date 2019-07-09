@@ -1,15 +1,14 @@
-
 import { Player } from "./Player";
 
 
-export class Game {
-  
+export class Game {  
     constructor(public turn: number = 0, 
                 public isGameFinished: boolean = false, 
                 public players: Player[] = [], 
                 public rounds: number = 0) {
         
     }
+
 
    
     // getPlayerList() {

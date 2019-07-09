@@ -8,7 +8,9 @@ export class Player {
     chain: Sheet[];
     sheets: Sheet[];
 
-    constructor(public name: string, public email: string, currentGame: string = "", chain: Sheet[] = [], sheets: Sheet[] = []) {  }
+
+    constructor(public name: string, public email: string, currentGame: Game = null, chain: Sheet[] = [], sheets: Sheet[] = []) {  }
+
 
 
     createChainAndSheets() {
@@ -28,13 +30,17 @@ export class Player {
 
    }
   
-  //  findPlayerIndex() {
-  //    for (let i = 0; i < this.currentGame.players.length; i++) {
-  //      if (JSON.stringify(this) === JSON.stringify(this.currentGame.players[i])) {
-  //        return i;
-  //      }
-  //     }
-  //   }
+   findPlayerIndex() {
+     for (let i = 0; i < this.currentGame.players.length; i++) {
+       if (JSON.stringify(this) === JSON.stringify(this.currentGame.players[i])) {
+         return i;
+       }
+      }
+    }
+
+    getSheetsByPlayerIndex(playerIndex: number) {
+      JSON.stringify(this.currentGame.players[playerIndex].sheets)
+    }
 
  
 }
