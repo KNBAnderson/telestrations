@@ -55,7 +55,7 @@ export class GameLobbyComponent implements OnInit {
   }
 
   goToGamePage() {
-    this.router.navigate([ '/game']);
+    this.router.navigate([ '/testgame']);
   };
 
   

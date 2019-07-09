@@ -27,7 +27,7 @@ export class SheetComponent implements AfterViewInit {
   public currentSheet: Sheet /* = currentPlayer.sheets[turn]; */
   public currentColor;
   
-  private changeColor(hexcode: string) {
+  public changeColor(hexcode: string) {
     this.currentColor = hexcode;
     console.log(this.currentColor)
   }
@@ -46,7 +46,7 @@ export class SheetComponent implements AfterViewInit {
     this.captureEvents(canvasEl);
   }
   //!!!! THIS NEEDS TO BE UPDATED TO PUSH THE IMG TO THE PLAYER AND PROB ROUTE TO NEXT PAGE OR SOMETHING
-  private saveDrawing() {
+  public saveDrawing() {
     const canvasEl: HTMLCanvasElement = this.canvas.nativeElement;
     let drawingUrl = canvasEl.toDataURL();
     this.currentSheet.drawSomething(drawingUrl);
