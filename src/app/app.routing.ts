@@ -10,7 +10,11 @@ import { EmailComponent } from './email/email.component';
 import { GameLobbyComponent } from './game-lobby/game-lobby.component';
 import { RulesComponent } from './rules/rules.component';
 import { CurrentGameComponent } from './current-game/current-game.component';
+
+import { NewGameComponent } from './new-game/new-game.component';
+
 import { SheetComponent } from './sheet/sheet.component';
+
 
 const appRoutes: Routes = [
     {
@@ -45,11 +49,15 @@ const appRoutes: Routes = [
         component: RulesComponent
     },
     {
-        path: 'players/:$key/game',
+        path: 'game-lobby/:$key/game',
         component: CurrentGameComponent
     },
     {
-        path: 'game',
+        path: 'game-lobby/:$key/new-game',
+        component: NewGameComponent
+    },
+    {
+        path: 'testgame',
         component: SheetComponent
     }
  ];

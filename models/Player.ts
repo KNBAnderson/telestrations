@@ -8,7 +8,9 @@ export class Player {
     chain: Sheet[];
     sheets: Sheet[];
 
+
     constructor(public name: string, public email: string, currentGame: Game = null, chain: Sheet[] = [], sheets: Sheet[] = []) {  }
+
 
 
     createChainAndSheets() {

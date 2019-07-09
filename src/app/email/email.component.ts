@@ -52,8 +52,6 @@ onSubmit(formData) {
   if(formData.valid) {
     this.af.auth.signInWithEmailAndPassword(formData.value.email, formData.value.password).then(
       (success) => {
-        console.log("this should be 1st");
-        
         this.router.navigate(['game-lobby', this.keyRightNow]);
     }).catch(
       (err) => {
